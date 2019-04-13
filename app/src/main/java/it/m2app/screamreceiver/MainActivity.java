@@ -10,6 +10,7 @@ import android.os.Looper;
 import android.os.Process;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        final TextView intro = findViewById(R.id.intro);
+        intro.setMovementMethod(LinkMovementMethod.getInstance());
 
         final TextView info = findViewById(R.id.info);
 

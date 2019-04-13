@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/intro"
-        android:autoLink="web" />
+        android:text="@string/intro" />
 
     <TextView
         android:id="@+id/info"

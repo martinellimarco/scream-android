@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android Scream Receiver</string>
+    <string name="intro">This is a very simple receiver for <a href="https://github.com/duncanthrax/scream">Scream</a>. You can contribute or fill bug reports <a href="https://github.com/martinellimarco/scream-android">here</a>.</string>
+</resources>

@@ -8,7 +8,7 @@ import android.net.wifi.WifiManager;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Process;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.WindowManager;
@@ -47,13 +47,10 @@ public class MainActivity extends AppCompatActivity {
         final TextView info = findViewById(R.id.info);
 
         final Handler h = new Handler(Looper.getMainLooper());
-        updateUI = new Runnable() {
-            @Override
-            public void run() {
-                info.setText(infoMsg);
+        updateUI = () -> {
+            info.setText(infoMsg);
 
-                h.postDelayed(updateUI, 1000);
-            }
+            h.postDelayed(updateUI, 1000);
         };
         h.postDelayed(updateUI, 1000);
 
